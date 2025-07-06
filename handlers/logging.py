@@ -16,18 +16,12 @@ from datetime import datetime
 import os
 import sys
 
-# Essaye d'importer config depuis différents emplacements
-try:
-    from ..config import LOG_ROTATION_SIZE, LOG_FILENAME_PATTERN, TIMESTAMP_FORMAT
-except ImportError:
-    try:
-        from config import LOG_ROTATION_SIZE, LOG_FILENAME_PATTERN, TIMESTAMP_FORMAT
-    except ImportError:
-        # Ajoute le répertoire parent au chemin et réessaye
-        parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        if parent_dir not in sys.path:
-            sys.path.insert(0, parent_dir)
-        from config import LOG_ROTATION_SIZE, LOG_FILENAME_PATTERN, TIMESTAMP_FORMAT
+# Ajoute le répertoire parent au chemin pour les imports absolus
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if parent_dir not in sys.path:
+    sys.path.insert(0, parent_dir)
+
+from config import LOG_ROTATION_SIZE, LOG_FILENAME_PATTERN, TIMESTAMP_FORMAT
 
 
 class LoggingHandler:

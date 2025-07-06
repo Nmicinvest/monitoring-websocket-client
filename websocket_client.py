@@ -23,7 +23,7 @@ from typing import Optional, Dict, Any, Callable, List
 import websockets
 from websockets.exceptions import WebSocketException, ConnectionClosed
 
-from .config import (
+from config import (
     RECONNECT_INTERVAL,
     PING_INTERVAL,
     PING_TIMEOUT,

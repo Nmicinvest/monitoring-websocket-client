@@ -8,21 +8,16 @@ en temps réel nécessitant peu d'espace.
 """
 
 from typing import Dict, Any
-from .base import BaseFormatter
+import os
+import sys
 
-# Gestion des imports relatifs pour différents contextes d'exécution
-try:
-    from ..config import ANSI_COLORS, METRIC_FORMAT
-except ImportError:
-    try:
-        from config import ANSI_COLORS, METRIC_FORMAT
-    except ImportError:
-        # Fallback pour quand le module est importé depuis différents contextes
-        # (par exemple lors de tests unitaires ou d'exécution directe)
-        import sys
-        import os
-        sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-        from config import ANSI_COLORS, METRIC_FORMAT
+# Ajoute le répertoire parent au chemin pour les imports absolus
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if parent_dir not in sys.path:
+    sys.path.insert(0, parent_dir)
+
+from formatters.base import BaseFormatter
+from config import ANSI_COLORS, METRIC_FORMAT
 
 
 class SimpleFormatter(BaseFormatter):

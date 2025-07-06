@@ -11,39 +11,19 @@ from typing import Dict, Any
 import os
 import sys
 
-# Gère les différents contextes d'import
-try:
-    from ..config import (
-        BYTES_PER_KB,
-        SECONDS_PER_MINUTE,
-        SECONDS_PER_HOUR,
-        THRESHOLD_WARNING,
-        THRESHOLD_CRITICAL,
-        ANSI_COLORS
-    )
-except ImportError:
-    try:
-        from config import (
-            BYTES_PER_KB,
-            SECONDS_PER_MINUTE,
-            SECONDS_PER_HOUR,
-            THRESHOLD_WARNING,
-            THRESHOLD_CRITICAL,
-            ANSI_COLORS
-        )
-    except ImportError:
-        # Ajoute le répertoire parent au chemin et réessaye
-        parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        if parent_dir not in sys.path:
-            sys.path.insert(0, parent_dir)
-        from config import (
-            BYTES_PER_KB,
-            SECONDS_PER_MINUTE,
-            SECONDS_PER_HOUR,
-            THRESHOLD_WARNING,
-            THRESHOLD_CRITICAL,
-            ANSI_COLORS
-        )
+# Ajoute le répertoire parent au chemin pour les imports absolus
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if parent_dir not in sys.path:
+    sys.path.insert(0, parent_dir)
+
+from config import (
+    BYTES_PER_KB,
+    SECONDS_PER_MINUTE,
+    SECONDS_PER_HOUR,
+    THRESHOLD_WARNING,
+    THRESHOLD_CRITICAL,
+    ANSI_COLORS
+)
 
 
 class BaseFormatter(ABC):

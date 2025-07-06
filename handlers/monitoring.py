@@ -9,24 +9,18 @@ de l'historique et le formatage pour l'affichage.
 import logging
 from typing import Dict, Any, Optional, List, Callable
 from datetime import datetime
-from ..formatters.base import BaseFormatter
 
 # Gère les différents contextes d'import
 import os
 import sys
 
-# Essaye d'importer config depuis différents emplacements
-try:
-    from ..config import MAX_HISTORY_SIZE
-except ImportError:
-    try:
-        from config import MAX_HISTORY_SIZE
-    except ImportError:
-        # Ajoute le répertoire parent au chemin et réessaye
-        parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        if parent_dir not in sys.path:
-            sys.path.insert(0, parent_dir)
-        from config import MAX_HISTORY_SIZE
+# Ajoute le répertoire parent au chemin pour les imports absolus
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if parent_dir not in sys.path:
+    sys.path.insert(0, parent_dir)
+
+from formatters.base import BaseFormatter
+from config import MAX_HISTORY_SIZE
 
 
 class MonitoringHandler:

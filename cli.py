@@ -22,8 +22,8 @@ import signal
 from typing import Optional
 import types
 
-from .monitoring_client import MonitoringClient
-from .config import (
+from monitoring_client import MonitoringClient
+from config import (
     DEFAULT_WEBSOCKET_URI,
     DEFAULT_FORMAT_TYPE,
     RECONNECT_INTERVAL,

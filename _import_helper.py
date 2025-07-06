@@ -15,7 +15,7 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 # Maintenant config peut être importé directement
-from . import config
+import config
 
 # Rend tous les attributs de config disponibles globalement
 # Cela permet d'utiliser les constantes de configuration comme si elles
