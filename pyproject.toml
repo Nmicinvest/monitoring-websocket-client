@@ -27,6 +27,11 @@ dependencies = [
     "websockets",
 ]
 
+[project.urls]
+"Homepage" = "https://github.com/Nmicinvest/monitoring-websocket-client/"
+"Repository" = "https://github.com/Nmicinvest/monitoring-websocket-client/"
+"Bug Tracker" = "https://github.com/Nmicinvest/monitoring-websocket-client/issues"
+
 [project.scripts]
 monitoring-websocket-client = "cli:main"
 
