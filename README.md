@@ -29,6 +29,8 @@
 
 The **WebSocket Monitoring Client** is a professional real-time monitoring system that allows you to receive, process, and display monitoring data via WebSocket. It offers a flexible interface for monitoring system metrics (CPU, RAM, disk, GPU) with support for different output formats and usage modes.
 
+This module was created to work with the module **WebSocket Monitoring Server** : https://pypi.org/project/monitoring-websocket-server/
+
 ### Key Features
 
 - ✅ **Robust WebSocket connection** with automatic reconnection
