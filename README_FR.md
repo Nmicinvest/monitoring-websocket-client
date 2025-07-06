@@ -84,7 +84,7 @@ python cli.py --help
 ### Vérification de l'Installation
 
 ```bash
-monitoring-client --help
+monitoring-websocket-client --help
 ```
 
 ---
