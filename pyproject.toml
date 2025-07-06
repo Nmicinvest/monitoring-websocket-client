@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "monitoring-websocket-client"
-version = "1.0.83.87"
+version = "1.0.83.88"
 description = "Client WebSocket pour monitoring système en temps réel"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -36,8 +36,8 @@ dependencies = [
 monitoring-websocket-client = "cli:main"
 
 [tool.setuptools]
-packages = ["formatters", "handlers"]
-py-modules = ["__init__", "__main__", "cli", "monitoring_client", "websocket_client", "config", "_import_helper"]
+packages = ["formatters", "handlers", "config"]
+py-modules = ["__init__", "__main__", "cli", "monitoring_client", "websocket_client", "_import_helper"]
 include-package-data = true
 
 [tool.setuptools.package-data]

@@ -6,14 +6,6 @@ suivi des statistiques, gestion des états et support des gestionnaires de messa
 Il fournit une base solide pour construire des clients de monitoring temps réel.
 """
 
-import os
-import sys
-
-# Ajoute le répertoire du projet au chemin Python pour l'import de la configuration
-project_dir = os.path.dirname(os.path.abspath(__file__))
-if project_dir not in sys.path:
-    sys.path.insert(0, project_dir)
-
 import asyncio
 import json
 import logging

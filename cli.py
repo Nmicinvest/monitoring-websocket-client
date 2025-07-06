@@ -7,14 +7,6 @@ Il gère les arguments de ligne de commande, la configuration du logging et l'ex
 du client de monitoring avec gestion des signaux et des statistiques.
 """
 
-import os
-import sys
-
-# Ajoute le répertoire du projet au chemin Python pour l'import de la configuration
-project_dir = os.path.dirname(os.path.abspath(__file__))
-if project_dir not in sys.path:
-    sys.path.insert(0, project_dir)
-
 import argparse
 import asyncio
 import logging

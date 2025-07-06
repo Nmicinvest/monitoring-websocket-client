@@ -6,14 +6,6 @@ avec support pour les modes synchrone et asynchrone, la gestion des callbacks,
 et l'intégration avec les formateurs et gestionnaires.
 """
 
-import os
-import sys
-
-# Ajoute le répertoire du projet au chemin Python pour l'import de la configuration
-project_dir = os.path.dirname(os.path.abspath(__file__))
-if project_dir not in sys.path:
-    sys.path.insert(0, project_dir)
-
 import asyncio
 import logging
 import threading

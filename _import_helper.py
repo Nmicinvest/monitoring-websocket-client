@@ -1,20 +1,10 @@
 """
 Module d'aide pour garantir l'import de la configuration depuis tout contexte.
 
-Ce module résout les problèmes d'import en ajoutant le répertoire racine
-du projet au chemin Python, permettant l'import direct du module config
-depuis n'importe quel emplacement dans la hiérarchie du projet.
+Ce module résout les problèmes d'import en important directement le module config
+et en rendant ses attributs disponibles globalement.
 """
 
-import os
-import sys
-
-# Ajoute le répertoire racine du projet au chemin Python
-project_root = os.path.dirname(os.path.abspath(__file__))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
-
-# Maintenant config peut être importé directement
 import config
 
 # Rend tous les attributs de config disponibles globalement

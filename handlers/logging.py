@@ -12,15 +12,6 @@ from typing import Dict, Any, Optional
 from pathlib import Path
 from datetime import datetime
 
-# Gère les différents contextes d'import
-import os
-import sys
-
-# Ajoute le répertoire parent au chemin pour les imports absolus
-parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if parent_dir not in sys.path:
-    sys.path.insert(0, parent_dir)
-
 from config import LOG_ROTATION_SIZE, LOG_FILENAME_PATTERN, TIMESTAMP_FORMAT
 
 

@@ -9,13 +9,6 @@ le format JSON compact et le format JSON indenté (pretty-print).
 
 import json
 from typing import Dict, Any
-import os
-import sys
-
-# Ajoute le répertoire parent au chemin pour les imports absolus
-parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if parent_dir not in sys.path:
-    sys.path.insert(0, parent_dir)
 
 from formatters.base import BaseFormatter
 from config import JSON_INDENT_LEVEL
