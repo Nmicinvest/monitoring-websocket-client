@@ -21,16 +21,16 @@ from pathlib import Path
 from typing import Optional, Union, Dict, Any, Callable, List
 from datetime import datetime
 
-from websocket_client import WebSocketClient, ClientState
-from formatters import (
+from .websocket_client import WebSocketClient, ClientState
+from .formatters import (
     BaseFormatter,
     SimpleFormatter,
     DetailedFormatter,
     JsonFormatter,
     CompactFormatter
 )
-from handlers import MonitoringHandler, LoggingHandler
-from config import (
+from .handlers import MonitoringHandler, LoggingHandler
+from .config import (
     DEFAULT_WEBSOCKET_URI,
     DEFAULT_FORMAT_TYPE,
     RECONNECT_INTERVAL,

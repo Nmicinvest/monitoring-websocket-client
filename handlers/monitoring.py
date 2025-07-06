@@ -9,7 +9,7 @@ de l'historique et le formatage pour l'affichage.
 import logging
 from typing import Dict, Any, Optional, List, Callable
 from datetime import datetime
-from formatters.base import BaseFormatter
+from ..formatters.base import BaseFormatter
 
 # Gère les différents contextes d'import
 import os
