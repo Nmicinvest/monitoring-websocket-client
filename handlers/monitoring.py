@@ -11,7 +11,7 @@ from typing import Dict, Any, Optional, List, Callable
 from datetime import datetime
 
 from formatters.base import BaseFormatter
-from config import MAX_HISTORY_SIZE
+from monitoring_config import MAX_HISTORY_SIZE
 
 
 class MonitoringHandler:

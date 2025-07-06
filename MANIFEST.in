@@ -4,4 +4,4 @@ include requirements.txt
 recursive-include dist *
 recursive-include formatters *.py
 recursive-include handlers *.py
-recursive-include config *.py
+recursive-include monitoring_config *.py

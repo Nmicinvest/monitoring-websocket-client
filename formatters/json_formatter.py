@@ -11,7 +11,7 @@ import json
 from typing import Dict, Any
 
 from formatters.base import BaseFormatter
-from config import JSON_INDENT_LEVEL
+from monitoring_config import JSON_INDENT_LEVEL
 
 
 class JsonFormatter(BaseFormatter):

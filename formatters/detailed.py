@@ -11,7 +11,7 @@ from typing import Dict, Any
 from datetime import datetime
 
 from formatters.base import BaseFormatter
-from config import (
+from monitoring_config import (
     ANSI_COLORS,
     BYTES_PER_MB,
     PROGRESS_BAR_LENGTH,

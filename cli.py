@@ -11,11 +11,12 @@ import argparse
 import asyncio
 import logging
 import signal
+import sys
 from typing import Optional
 import types
 
 from monitoring_client import MonitoringClient
-from config import (
+from monitoring_config import (
     DEFAULT_WEBSOCKET_URI,
     DEFAULT_FORMAT_TYPE,
     RECONNECT_INTERVAL,

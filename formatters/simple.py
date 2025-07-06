@@ -10,7 +10,7 @@ en temps réel nécessitant peu d'espace.
 from typing import Dict, Any
 
 from formatters.base import BaseFormatter
-from config import ANSI_COLORS, METRIC_FORMAT
+from monitoring_config import ANSI_COLORS, METRIC_FORMAT
 
 
 class SimpleFormatter(BaseFormatter):

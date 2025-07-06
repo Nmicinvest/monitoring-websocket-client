@@ -36,7 +36,7 @@ dependencies = [
 monitoring-websocket-client = "cli:main"
 
 [tool.setuptools]
-packages = ["formatters", "handlers", "config"]
+packages = ["formatters", "handlers", "monitoring_config"]
 py-modules = ["__init__", "__main__", "cli", "monitoring_client", "websocket_client", "_import_helper"]
 include-package-data = true
 

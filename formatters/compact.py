@@ -10,7 +10,7 @@ des abréviations pour maximiser l'information dans un minimum d'espace.
 from typing import Dict, Any
 
 from formatters.base import BaseFormatter
-from config import ANSI_COLORS, BYTES_PER_GB
+from monitoring_config import ANSI_COLORS, BYTES_PER_GB
 
 
 class CompactFormatter(BaseFormatter):

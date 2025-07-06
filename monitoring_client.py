@@ -22,7 +22,7 @@ from formatters import (
     CompactFormatter
 )
 from handlers import MonitoringHandler, LoggingHandler
-from config import (
+from monitoring_config import (
     DEFAULT_WEBSOCKET_URI,
     DEFAULT_FORMAT_TYPE,
     RECONNECT_INTERVAL,

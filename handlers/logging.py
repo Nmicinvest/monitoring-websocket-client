@@ -12,7 +12,7 @@ from typing import Dict, Any, Optional
 from pathlib import Path
 from datetime import datetime
 
-from config import LOG_ROTATION_SIZE, LOG_FILENAME_PATTERN, TIMESTAMP_FORMAT
+from monitoring_config import LOG_ROTATION_SIZE, LOG_FILENAME_PATTERN, TIMESTAMP_FORMAT
 
 
 class LoggingHandler:

@@ -9,7 +9,7 @@ partagées par tous les formateurs concrets.
 from abc import ABC, abstractmethod
 from typing import Dict, Any
 
-from config import (
+from monitoring_config import (
     BYTES_PER_KB,
     SECONDS_PER_MINUTE,
     SECONDS_PER_HOUR,
